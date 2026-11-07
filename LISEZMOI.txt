@@ -1,0 +1,42 @@
+Équilibre alimentaire du foyer — version 1.2.0 (07/11/2026)
+
+Nouveautés de la 1.2.0
+  - Budget par jour : 12 € au plus (cible 10 €), réglable dans l'onglet Foyer ; coût de chaque jour affiché.
+  - Préparation hors cuisson : 20 min au plus (15 min au choix) ; le générateur ne propose rien de plus long.
+  - « Prochain repas » au premier plan : premier écran, rappel en tête des autres onglets, « C'est prêt ».
+  - Synchronisation téléphone / PC par un dépôt GitHub privé, comme l'outil NHL ; appli installable.
+  - 28 recettes économiques et rapides (19 plats, 5 petits-déjeuners, 4 goûters), kiwis en barquette.
+
+Fichiers livrés
+  equilibre_alimentaire.html   l'outil, fichier unique autonome (s'ouvre depuis le disque, sur PC)
+  appli_en_ligne/              la même appli pour GitHub Pages : index.html, manifest.webmanifest, sw.js, 3 icônes
+  verif_exigences.js           matrice d'exigences : node verif_exigences.js equilibre_alimentaire.html
+                               (cherche l'appli en ligne dans le dossier « appli_en_ligne » voisin, ou --en-ligne dossier)
+  test_navigateur.js           contrôle navigateur (Playwright), lancé automatiquement par la matrice s'il est présent
+
+Mise en place de la synchronisation (une fois, environ 10 minutes) : onglet Foyer → « Synchronisation
+téléphone / PC » → « Mise en place ». En bref :
+  1. Dépôt PUBLIC « equilibre-alimentaire » : y déposer le contenu du dossier appli_en_ligne, puis
+     Settings → Pages → Branch main, dossier / (root). Adresse : https://ton-pseudo.github.io/equilibre-alimentaire/
+  2. Dépôt PRIVÉ « equilibre-donnees » (avec un README). Le dépôt privé de l'outil NHL convient aussi :
+     cet outil n'écrit que dans son dossier equilibre/.
+  3. Jeton « Fine-grained » limité au dépôt des données, permission Contents : Read and write
+     (ou ajouter ce dépôt au jeton de l'outil NHL).
+  4. Sur le PC : pseudo, dépôt, jeton, adresse de l'appli → « Enregistrer et synchroniser ».
+  5. Sur le téléphone : « Relier un autre appareil » sur le PC → scanner le QR code → « Relier » → installer l'appli.
+Le jeton reste dans le navigateur de chaque appareil : il n'est ni exporté, ni envoyé dans le dépôt.
+
+Pour reconstruire après une modification des données ou du code :
+  1. Table CIQUAL 2025 (ANSES, fichiers XML du 03/11/2025) dans un dossier, puis
+     python3 build/parse_ciqual.py <dossier_xml> ciqual2025.json
+  2. python3 build/build_data.py ciqual2025.json build/data.json
+     (aliments, articles Carrefour, recettes et étiquettes d'eaux : build/data_src.py)
+  3. python3 build/assemble.py                         (écrit equilibre_alimentaire.html à partir de src/)
+     python3 build/assemble.py --en-ligne appli_en_ligne   (écrit l'appli en ligne)
+  4. node verif_exigences.js equilibre_alimentaire.html   (doit afficher 32/32)
+
+src/core.js      calcul pur (s'exécute aussi dans node)      src/ui.js       interface et synchronisation
+src/style.css    styles                                       src/template.html  squelette
+src/qrgen.js     générateur de QR code (Kazuhiko Arase, licence MIT)
+src/pwa/         manifeste, service worker et icônes de l'appli en ligne
+src/exigences.json  liste des exigences affichée dans l'outil (identique à la matrice de verif_exigences.js)

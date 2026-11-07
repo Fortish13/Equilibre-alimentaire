@@ -1,0 +1,130 @@
+[
+ {
+  "id": "E01",
+  "texte": "Fichier HTML unique et autonome : styles, données et scripts intégrés, aucune ressource réseau nécessaire, fonctionne ouvert depuis le disque ; seul accès réseau, la synchronisation GitHub facultative, une fois configurée par l'utilisateur."
+ },
+ {
+  "id": "E02",
+  "texte": "Foyer de 2 adultes et 1 enfant de 7 ans, chacun réglable (sexe, âge, poids, taille, activité)."
+ },
+ {
+  "id": "E03",
+  "texte": "Références nutritionnelles ANSES propres à chaque profil (adulte homme, adulte femme, enfant 7-10 ans), avec leur type (RNP, AS, limite) et leur source."
+ },
+ {
+  "id": "E04",
+  "texte": "Nutriments suivis : magnésium, fer, calcium, zinc, potassium, phosphore, iode, sélénium, cuivre, sodium, vitamines A, D, E, C, B1, B2, B6, B9, B12, oméga-3 (ALA, EPA + DHA), fibres, protéines, énergie, glucides, sucres, lipides, acides gras saturés."
+ },
+ {
+  "id": "E05",
+  "texte": "Composition des aliments issue de la table CIQUAL 2025 de l'ANSES, avec le code et le libellé CIQUAL de chaque aliment."
+ },
+ {
+  "id": "E06",
+  "texte": "Recettes pour les quatre moments de la journée : petit-déjeuner, déjeuner, dîner et goûter de 16 h (au moins 6 petits-déjeuners, 6 goûters et 20 plats)."
+ },
+ {
+  "id": "E07",
+  "texte": "Chaque recette donne ses ingrédients chiffrés, ses étapes, ses temps de préparation et de cuisson."
+ },
+ {
+  "id": "E08",
+  "texte": "Quantités données pour chaque personne et pour toute la famille."
+ },
+ {
+  "id": "E09",
+  "texte": "Planning de 7 jours × 4 moments modifiable à la main, avec verrouillage des choix."
+ },
+ {
+  "id": "E10",
+  "texte": "Générateur de semaine équilibrée qui améliore mesurablement l'équilibre par rapport à des semaines tirées au hasard, et respecte les verrous."
+ },
+ {
+  "id": "E11",
+  "texte": "Bilan par personne : apport moyen par jour comparé au repère, taux de couverture, alertes de manque et d'excès (limites de sécurité, sodium, sucres, acides gras saturés)."
+ },
+ {
+  "id": "E12",
+  "texte": "Repères PNNS contrôlés sur la semaine : fruits et légumes, produits laitiers, légumes secs, poisson et poisson gras, viande, charcuterie, féculents complets."
+ },
+ {
+  "id": "E13",
+  "texte": "Prix Carrefour pour chaque article (libellé, format, prix, date et source du relevé), modifiables et conservés."
+ },
+ {
+  "id": "E14",
+  "texte": "Coût par repas, par jour et par semaine pour le foyer."
+ },
+ {
+  "id": "E15",
+  "texte": "Liste de courses de la semaine regroupée par rayon, en paquets entiers, avec le total."
+ },
+ {
+  "id": "E16",
+  "texte": "Eau de boisson de chaque personne prise en compte (calcium, magnésium, sodium des eaux vendues chez Carrefour ou du robinet)."
+ },
+ {
+  "id": "E17",
+  "texte": "Suggestions pour combler un manque : aliments, recettes et eaux riches dans le nutriment, avec leur apport et leur coût."
+ },
+ {
+  "id": "E18",
+  "texte": "Conversion poids cru → poids cuit (rendement) et partie comestible prises en compte."
+ },
+ {
+  "id": "E19",
+  "texte": "Portions indivisibles (yaourt, fruit, verre de lait) et facteur de portion calé sur le besoin énergétique de chacun."
+ },
+ {
+  "id": "E20",
+  "texte": "Repas pris dehors (cantine, travail) : estimés dans le bilan, exclus des courses et du coût."
+ },
+ {
+  "id": "E21",
+  "texte": "Données manquantes de la table CIQUAL signalées (taux de complétude par nutriment)."
+ },
+ {
+  "id": "E22",
+  "texte": "Sauvegarde locale qui ne bloque jamais l'outil si le navigateur la refuse, export et import des réglages."
+ },
+ {
+  "id": "E23",
+  "texte": "Lisible sur téléphone : pas de défilement horizontal de la page à 390 px de large."
+ },
+ {
+  "id": "E24",
+  "texte": "Aucune erreur JavaScript au chargement ni en parcourant tous les onglets dans un vrai navigateur."
+ },
+ {
+  "id": "E25",
+  "texte": "Avertissement : outil d'information, pas un avis médical ; vitamine D et compléments à voir avec le médecin."
+ },
+ {
+  "id": "E26",
+  "texte": "Budget par jour du foyer : 12 € au plus par défaut (réglable ; 10 à 12 € demandés) avec une cible de 10 €. Le générateur ne propose aucun jour au-dessus du maximum quand c'est possible ; le coût de chaque jour est affiché et un jour au-dessus est signalé."
+ },
+ {
+  "id": "E27",
+  "texte": "Besoin énergétique calculé pour chacun d'après son profil : Black et al. (1996) pour les adultes (poids, taille, âge, activité), Schofield (OMS 1985) × activité + croissance pour l'enfant (poids, activité), cohérent avec les besoins ANSES des 7-10 ans."
+ },
+ {
+  "id": "E28",
+  "texte": "Mises en garde sur l'eau de boisson tirées des étiquettes (fluor au-delà de 1,5 mg/L avec la mention légale pour l'enfant, sulfates, sodium, minéralisation), affichées dans le foyer et dans les suggestions."
+ },
+ {
+  "id": "E29",
+  "texte": "Préparation de chaque repas limitée hors cuisson : 20 min au plus par défaut, 15 min au choix. Le générateur ne propose aucune recette plus longue ; une recette plus longue choisie à la main est signalée."
+ },
+ {
+  "id": "E30",
+  "texte": "Prochain repas à préparer au premier plan : premier écran à l'ouverture et rappel en tête des autres onglets, avec l'heure du repas et celle où commencer, les personnes présentes, les quantités pour toutes et pour chacune, les étapes ; « C'est prêt » passe au repas suivant."
+ },
+ {
+  "id": "E31",
+  "texte": "Données à jour sur n'importe quel appareil (téléphone, tablette, PC), comme l'outil NHL : synchronisation par un dépôt GitHub privé de l'utilisateur, jeton gardé dans le navigateur (jamais exporté ni envoyé dans le dépôt), dépôt public refusé, modifications de plusieurs appareils fusionnées."
+ },
+ {
+  "id": "E32",
+  "texte": "Édition en ligne installable (GitHub Pages : manifeste, service worker, icônes), utilisable hors connexion, et liaison d'un nouvel appareil par lien ou QR code."
+ }
+]

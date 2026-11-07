@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Équilibre alimentaire du foyer</title>
+<!--__PWA__-->
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="entete-haut">
+    <div class="titre">
+      <h1>Équilibre alimentaire du foyer <button id="syncTag" class="sync-tag" type="button" hidden></button></h1>
+      <p class="sous-titre" id="sousTitre"></p>
+    </div>
+    <div class="foyer-resume" id="foyerResume" aria-label="Besoins du foyer"></div>
+  </div>
+  <div class="bandeau-repas" id="bandeauRepas" hidden></div>
+</header>
+<nav class="onglets" role="tablist" aria-label="Sections">
+    <button role="tab" data-onglet="aujourdhui" aria-selected="true">Prochain repas</button>
+    <button role="tab" data-onglet="semaine" aria-selected="false">Semaine</button>
+    <button role="tab" data-onglet="bilan" aria-selected="false">Bilan nutritionnel</button>
+    <button role="tab" data-onglet="recettes" aria-selected="false">Recettes</button>
+    <button role="tab" data-onglet="courses" aria-selected="false">Courses</button>
+    <button role="tab" data-onglet="prix" aria-selected="false">Prix Carrefour</button>
+    <button role="tab" data-onglet="foyer" aria-selected="false">Foyer</button>
+    <button role="tab" data-onglet="methode" aria-selected="false">Méthode et sources</button>
+</nav>
+<main id="contenu"><p>Chargement…</p></main>
+<div id="voile" class="voile" hidden><div class="voile-boite"><p id="voileTexte" style="margin:0">Calcul en cours…</p></div></div>
+<dialog id="dlgRecette" aria-label="Recette"></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px">Cet outil a besoin de JavaScript pour fonctionner.</p></noscript>
+<script id="donnees" type="application/json">/*__DONNEES__*/</script>
+<script id="exigences-liste" type="application/json">/*__EXIGENCES__*/</script>
+<script id="qrcode">
+/*__QR__*/
+</script>
+<script id="coeur">
+/*__CORE__*/
+</script>
+<script id="interface">
+/*__UI__*/
+</script>
+</body>
+</html>
