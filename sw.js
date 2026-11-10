@@ -1,7 +1,7 @@
-// Service worker de l'outil « Équilibre alimentaire du foyer » — version cca64ddf
+// Service worker de l'outil « Équilibre alimentaire du foyer » — version 55091bcd
 // La page d'abord par le réseau : une nouvelle version déposée en ligne arrive dès l'ouverture ; le cache ne sert
 // que hors connexion. Les appels à l'API GitHub (synchronisation) ne passent jamais par ici.
-const CACHE = 'equilibre-cca64ddf', SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
+const CACHE = 'equilibre-55091bcd', SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 // seuls les anciens caches de cet outil sont effacés : l'outil NHL, publié à la même adresse github.io, garde les siens
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.indexOf('equilibre-') === 0 && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
